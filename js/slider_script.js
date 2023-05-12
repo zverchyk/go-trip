@@ -10,4 +10,5 @@ new Swiper('.slider-body', {
     },
     simulateTouch: true,
     grabCursor: true,
+
 });
