@@ -63,3 +63,19 @@ if(menuLinks.lenght > 0){
         }
     }
 }
+/// to delete pictures
+const secondFlexItem = document.querySelector('.header__pictures');
+
+// Check if the second flex item is hidden
+function checkVisibility() {
+  const isHidden = window.getComputedStyle(secondFlexItem).display === 'none';
+  
+  // If it's hidden, remove its content and values
+  if (isHidden) {
+    secondFlexItem.innerHTML = '';
+  }
+}
+
+// Call the checkVisibility function on page load and on window resize
+window.addEventListener('load', checkVisibility);
+window.addEventListener('resize', checkVisibility);

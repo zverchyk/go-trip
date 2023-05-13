@@ -80,6 +80,7 @@ body._lock{
 		font-family: 'Poppins_700';
 		font-size: 20px;
 		line-height: 30px;
+		margin-top: -15px;
 
 	}
 
@@ -253,6 +254,7 @@ body._lock{
 				&:last-child{
 					padding: 14px 44px;
 					margin-top: -14px;
+					margin-right: 0;
 					display: inline-block;
 					width: fit-content;
 					background: linear-gradient(129.54deg, #FF7B4E 15.57%, #FF584E 95.03%);
@@ -269,11 +271,61 @@ body._lock{
 			order: 2;
 			
 		}
+		&__main{
+			margin-top: 20px;
+			height: 70vh;
+		}
+		&__description{
+			justify-content: space-between;
+			z-index: 2;
+			
+			a{
+				margin-top: 20px;
+				font-size: 15px;
+				padding: 10px 15px;
+			}
+			h1{
+				font-size: 35px;
+				margin: 0;
+				line-height: 50px;
+
+			}
+			p{
+				font-size: 15px;
+
+			}
+			a:last-child{
+				margin: 0;
+				font-size: 20px;
+				padding: 10px 15px;
+			}
+		}
+		&__pictures{
+			:nth-child(1){
+				display: none;
+			}
+			:nth-child(3){
+				display: none;
+			}
+			:nth-child(4){
+				display: none;
+			}
+			:nth-child(5){
+				display: none;
+			}
+		}
+		&__woman{
+			width: 700px;
+			position: absolute;
+			z-index: 1;
+
+			top: 0;
+		}
 	}
-	
 	.menu-header{
 		
 		&__icon{
+			
 			order: 1;
 			z-index:15;
 			display: inline-block;
@@ -382,6 +434,18 @@ body._lock{
 		}
 	}
 	}
+@media (max-width: 390px){
+	.header{
+		&__description{
+			width: 100%;
+			
+		}
+		&__pictures{
+			
+			display: none;
+		}
+	}
+}
 .destinations {
 	height: 460px;
 	margin-top: px;	
@@ -452,6 +516,9 @@ body._lock{
 	}
 }
 
+@media (max-width: 992px){
+	
+}
 .slider-body {
 	padding: 30px 0 70px 0;
 	
