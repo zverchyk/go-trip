@@ -59,24 +59,32 @@ body._lock{
 
 .header {
 	background: linear-gradient(132.05deg, #428E5F -17.38%, #112120 78.4%), #204434;
-	height: 100vh;
+	
 	overflow: hidden;
+	padding-bottom: 100px;
+	position: relative;
+	&:after {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		border-style: solid;
+		z-index: 7;
+		border-width: 80px 50vw 0 50vw;
+		border-color: transparent #E5E5E5 #E5E5E5 #E5E5E5;
+		background: transparent;
+		
+		
+		
+  }
+
 
 	&__body {
+		
+		
 
 		
-		&:after {
-			content: "";
-			position: absolute;
-			bottom: -17px;
-			left: 0;
-			border-style: solid;
-			z-index: 7;
-			border-width: 80px 50vw 0 50vw;
-			border-color: transparent #E5E5E5 #E5E5E5 #E5E5E5;
-			width: 100vw;
-			height: 100px;
-		  }
+
 	}
 	&__logo{
 		position: relative;
@@ -215,7 +223,7 @@ body._lock{
 }
 
 .menu-header {
-	z-index: 1;
+	
 		&__body{
 
 		}
@@ -226,6 +234,7 @@ body._lock{
 		&__categories {
 			display: flex;
 			justify-content: space-between;
+			margin-top: -15px;
 			
 
 			li{
@@ -270,6 +279,30 @@ body._lock{
 
 		}
 }
+@media (max-width: 994px){
+	.body {
+		max-width: 750px;
+	}	
+	.menu-header{
+		&__categories{
+			li{
+				margin-right: 15px;
+
+			}
+		}
+	}
+	.header{
+		&__description{
+			h1{
+				 font-size: 45px;
+			}
+		}
+		&__woman{
+			 left: -120px;
+			 top: -70px;
+		}
+	}
+	}
 @media (max-width: 767px){
 	.header{
 		&__logo{
@@ -328,7 +361,7 @@ body._lock{
 		}
 	}
 	.menu-header{
-		
+		///burger icon
 		&__icon{
 			
 			order: 1;
@@ -353,7 +386,7 @@ body._lock{
 			&::before,
 			&::after{
 				content: "";
-				z-index: 20;
+				z-index: 3;
 			}
 			&::before{
 				top: 0;
@@ -390,21 +423,16 @@ body._lock{
 			width: 100%;
 			height: 100%;
 			background-color: black;
+			opacity: 0.9;
 			transition: left 0.3s ease 0s;
 			z-index: 10;
 			padding: 100px 30px 30px 30px;
-			overflow: auto;
+		
 			&._active{
 				left: 0;
 			}
 		&::before{
-			content: "";
-			position: fixed;
-			width: 100%;
-			top: 0;
-			left:0;
-			height: 100px;
-			background: linear-gradient(132.05deg, #428E5F -17.38%, #112120 78.4%), #204434;
+
 		}
 		}
 		&__categories{
@@ -426,19 +454,7 @@ body._lock{
 	}
 
 }
-@media (max-width: 994px){
-	.body {
-		max-width: 750px;
-	}	
-	.menu-header{
-		&__categories{
-			li{
-				margin-right: 15px;
 
-			}
-		}
-	}
-	}
 @media (max-width: 390px){
 	.header{
 		&__description{
@@ -510,16 +526,18 @@ body._lock{
 }
 	&__slider {
 		flex: 1 auto;
+		display: flex;
+		justify-content: center;
+
 	}
 }
 
-@media (max-width: 767px){
 
-	}
 @media (max-width: 992px){
 	.destinations{
 		&__body{
 			flex-direction: column;
+
 		}
 		&__describe{
 			width: 100vw;
@@ -547,6 +565,20 @@ body._lock{
 		width: 100vw;
 	}
 }
+@media (max-width: 767px){
+	.destinations{
+		&__slider{
+			margin-top: 40px;
+		
+		}
+	}
+	.slider-body{
+		&__wrapper{
+			left: 150px;
+		}
+		
+	}
+	}
 @media (max-width: 390px){
 	.destinations{
 		margin-top: 30px;
@@ -582,6 +614,12 @@ body._lock{
 		width: 40px;
 		height: 40px;
 	}
+	.slider-body{
+		&__wrapper{
+			left: 250px;
+		}
+		
+	}
 }
 .slider-body {
 	overflow: hidden;
@@ -592,6 +630,7 @@ body._lock{
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		
 	
 		
 	}
@@ -676,8 +715,8 @@ body._lock{
 
 
 .customerssay {
-	margin-top: 190px;
-	margin-bottom: 250px;
+	margin-top: 150px;
+	margin-bottom: 200px;
 	&__body {
 		display: flex;
 
@@ -740,7 +779,7 @@ body._lock{
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
-	justify-content: center;
+	justify-content: space-between;
 
 	&__title {
 		font-family: 'Poppins_500';
@@ -797,6 +836,16 @@ body._lock{
 		color: #0F1F1C;
 		opacity: 0.5;
 	}
+}
+@media(max-width: 1200px){
+	.cusdescription {
+		
+		&__title {
+			font-family: 'Poppins_500';
+			font-size: 40px;
+			line-height: 50px;
+		
+		}}
 }
 @media(max-width: 994px){
 
